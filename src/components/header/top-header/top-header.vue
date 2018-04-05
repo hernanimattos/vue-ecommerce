@@ -1,6 +1,26 @@
 <template>
   <div class="top-header">
-	  top header
+	 <div class="top-header__item top-header_logo">
+		 <a href="" ><img src="./assets/images/logo.png" alt=""></a>
+	 </div>
+	 <div class="top-header__item top-header__welcome">
+		<p>Olá visitante, Bem vindo</p>
+		<p>Faça seu login <a href="">aqui</a> ou <a href="">cadastre-se</a></p>
+		<fieldset >
+			<form action="">
+				<input type="text"><button>buscar</button>
+			</form>
+		</fieldset>
+	 </div>
+	 <div class="top-header__item top-header__bagage">
+		 <p class="top-header__bagage--itens"><a href="">Minha sacola</a> <span>0 itens | 0,00</span></p>
+		 <ul>
+			 <li><a href="" >Meus Pedidos</a></li>
+			 <li><a href="">Meu cadastro</a></li>
+			 <li><a href="">Atendimento</a></li>
+			 <li><a href="">Lista de desejos</a></li>
+		 </ul>
+	 </div>
   </div>
 </template>
 <script>

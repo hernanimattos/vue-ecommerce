@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
 	<top></top>
 	<main-container></main-container>
 	<cfooter></cfooter>
@@ -9,7 +9,7 @@
 
 <script>
 import top from "./components/header/top.vue";
-import mainContainer from "./components/main/main-container.vue";
+import mainContainer from "./components/container-products/main-container.vue";
 import cfooter from "./components/footer/cfooter";
 export default {
 	components: {
@@ -27,5 +27,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/scss/index.scss';
 
 </style>

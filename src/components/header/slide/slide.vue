@@ -1,6 +1,12 @@
 <template>
   <div class="slide">
-	  slide
+	  <div class="slide__wrapper">
+		  <div class="slide__item">
+			  <img src="" alt="">
+			  slide
+
+		  </div>
+	  </div>
   </div>
 </template>
 <script>
