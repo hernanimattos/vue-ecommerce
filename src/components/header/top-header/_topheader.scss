@@ -1,28 +1,83 @@
-.top-header__item{
-	display: inline-block;
+@import '../../../assets/scss/variables.scss';
+
+.top-header {
+	font-size: 0;
+}
+
+.top-header_logo {
+	width: 100%;
+
+	text-align: center;
+
+	@media (min-width: 61.94rem) {
+		width: 16.6666%;
+	}
+}
+
+.top-header__item {
+	font-size: 1rem;
+
+	@media (min-width:48rem) {
+		display: inline-block;
+	}
 }
 
 .top-header__bagage ul {
-  list-style: none;
+	list-style: none;
 }
 
 .top-header__bagage ul li::before {
-  content:"\203a";
+	content: '\203a';
 }
-.top-header__bagage ul li{
-	display: inline-block
+
+.top-header__bagage ul li {
+	display: inline-block;
 }
 
 .top-header__bagage--itens::before {
 	display: inline-block;
-	height:3em;
-	width: 2em;
-	background-image: url('./assets/images/bagage.png');
-	padding-right: .5em;
-	content:'';
 
+	width: 2em;
+	height: 3em;
+
+	padding-right: 0.5em;
+
+	background-image: url('./assets/images/bagage.png');
+
+	content: '';
 }
-.top-header__bagage--itens *{
+
+.top-header__bagage--itens * {
 	position: relative;
-	top: -1.15em
+	top: -1.15em;
+}
+
+.top-header__bagage,
+.top-header__welcome {
+	margin-right: 1rem;
+	margin-left: 1rem;
+
+	@media (min-width:36.94rem) {
+		width: 70%;
+
+		padding-right: $guther;
+		padding-left: $guther;
+		margin: 0 auto;
+	}
+
+	@media (min-width:48rem) {
+		width: 50%;
+	}
+}
+
+.top-header__bagage {
+	@media (min-width: 61.94rem) {
+		width: 33.3333%;
+	}
+}
+
+.top-header__bagage--options li {
+	display: inline-block;
+
+	width: 49%;
 }

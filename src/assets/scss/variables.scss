@@ -1,5 +1,13 @@
 $white: rgb(255, 255, 255);
-$green:rgb(102, 146, 106);
+$green: rgb(102, 146, 106);
 $color-link-distak: #66926a;
 $background-color-distak-top-section: rgb(222, 222, 172);
-
+$container: 75rem;
+$colum: 100%;
+$col-1: $colum / 6;
+$col-2: ($colum / 6) * 2;
+$col-3: ($colum / 6) * 3;
+$col-4: ($colum / 6) * 4;
+$col-5: ($colum / 6) * 5;
+$col-6: ($colum / 6) * 6;
+$guther: 1rem / 2;

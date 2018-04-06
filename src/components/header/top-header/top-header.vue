@@ -12,10 +12,10 @@
 			</form>
 		</fieldset>
 	 </div>
-	 <div class="top-header__item top-header__bagage">
+	 <div class="top-header__item top-header__bagage ">
 		 <p class="top-header__bagage--itens"><a href="">Minha sacola</a> <span>0 itens | 0,00</span></p>
-		 <ul>
-			 <li><a href="" >Meus Pedidos</a></li>
+		 <ul class="top-header__bagage--options">
+			 <li><a href="">Meus Pedidos</a></li>
 			 <li><a href="">Meu cadastro</a></li>
 			 <li><a href="">Atendimento</a></li>
 			 <li><a href="">Lista de desejos</a></li>
@@ -35,6 +35,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'topheader.scss';
+
 </style>
 
 
