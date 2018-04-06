@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <nav class="menu">
 	  <ul>
 		  <li><a href="">Homem</a></li>
 		  <li><a href="">Mulher</a></li>
@@ -9,7 +9,7 @@
 		  <li><a href="">Pele</a></li>
 		  <li><a href="">Novidades</a></li>
 	  </ul>
-  </div>
+  </nav>
 </template>
 <script>
 export default {
@@ -23,6 +23,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'menu.scss';
+
 </style>
 
 
