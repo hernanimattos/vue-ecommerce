@@ -4,27 +4,40 @@
 	margin-left: 5rem;
 
 	overflow: hidden;
+
+	outline: red 1px solid;
+}
+
+.more-view__products .controls {
+	position: absolute;
+	top: 50%;
+
+	display: block;
+	z-index: 1;
+
+	width: 100%;
+
+	font-size: 1rem;
+}
+
+.more-view__products .controls .right {
+	position: absolute;
+	right: 0;
 }
 
 .more-view__products-wrapper {
 	position: relative;
 	// width: 120%;
 
-	height: 35rem;
+	height: 32rem;
 
 	margin: 0;
 
 	overflow: hidden;
 
 	font-size: 0;
-}
 
-.controls {
-	display: block;
-
-	font-size: 1rem;
-
-	// padding: 2rem;
+	transition: 0.5s;
 }
 
 .more-view__products-wrapper .product {
@@ -32,7 +45,8 @@
 
 	width: 16rem;
 
-	padding: 2rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
 
 	font-size: 1rem;
 }

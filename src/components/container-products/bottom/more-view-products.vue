@@ -5,8 +5,8 @@
 		</div>
 		<div class="more-view__products">
 			<div class="controls">
-					<span @click="before">before</span>
-					<span @click="next">next</span>
+					<span @click="before" class="left">before</span>
+					<span @click="next" class="right">next</span>
 				</div>
 			<div class="more-view__products-wrapper">
 
@@ -72,6 +72,32 @@
 					<a href="#" class="btn btn-by"><img src="../../../assets/images/btn-by.png" alt="">
 					</a>
 				</div>
+					<div class="product">
+					<div class="product__img">
+						<img src="../../../assets/images/deso.png" alt="">
+					</div>
+					<span class="product__delivery">Frete grátis</span>
+					<h4 class="product__name"><a href=""> Desodorante Spray Masculino 90ml </a></h4>
+					<p class="product__description">lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur</p>
+					<span class="product__from--value">De: R$ 150,00</span>
+					<span class="product__to--value">Por: R$ 80,00</span>
+					<span class="product__details">+detalhes</span>
+					<a href="#" class="btn btn-by"><img src="../../../assets/images/btn-by.png" alt="">
+					</a>
+				</div>
+					<div class="product">
+					<div class="product__img">
+						<img src="../../../assets/images/deso.png" alt="">
+					</div>
+					<span class="product__delivery">Frete grátis</span>
+					<h4 class="product__name"><a href=""> Desodorante Spray Masculino 90ml </a></h4>
+					<p class="product__description">lorem ipsum dolor sit amet consectetur lorem ipsum dolor sit amet consectetur</p>
+					<span class="product__from--value">De: R$ 150,00</span>
+					<span class="product__to--value">Por: R$ 80,00</span>
+					<span class="product__details">+detalhes</span>
+					<a href="#" class="btn btn-by"><img src="../../../assets/images/btn-by.png" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -81,37 +107,71 @@
 	export default {
 		name: 'bottom',
 		data() {
-			return {};
+			return {
+				countSlide: 0,
+				currentSlide: 5,
+
+			};
 		},
 		methods: {
 			productWidth() {
-				const element = document.querySelector('.more-view__products-wrapper .product ');
-				const elementWidth = element.clientWidth;
-				const elementPadding = window.getComputedStyle(element, null).padding.split('px');
-				return elementWidth + parseInt(elementPadding, 10);
+				const element = document.querySelector('.more-view__products-wrapper .product');
+
+				return element.offsetWidth;
+			},
+			wrapper() {
+				const wrapperSlide = document.querySelector('.more-view__products');
+
+				const widthWrapper = this.productWidth() * 4;
+				wrapperSlide.style.width = `${widthWrapper}px`;
+
+				return 	wrapperSlide.style.width;
 			},
 			whidthWrapper() {
-				this.$nextTick(() => {
-					const wrapperSlide = document.querySelector('.more-view__products-wrapper ');
-					const wrapperSlideLength = document.querySelectorAll('.more-view__products-wrapper .product ').length;
-					const widthWrapper = this.productWidth() * wrapperSlideLength;
-					wrapperSlide.style.width = `${widthWrapper}px`;
-				});
+				const wrapperSlide = document.querySelector('.more-view__products-wrapper');
+				const wrapperSlideLength = document.querySelectorAll('.more-view__products-wrapper .product ').length;
+
+				const widthWrapper = this.productWidth() * wrapperSlideLength;
+				wrapperSlide.style.width = `${widthWrapper}px`;
+
+				return wrapperSlide.style.width;
 			},
 			before() {
 				const productsWarapper = document.querySelector('.more-view__products-wrapper');
-				console.log(productsWarapper.style, 'style');
-				// `-${this.productWidth()}px`
-				// console.log(productsWarapper.style.marginLeft , 'sss');
+				const qtdSlide = document.querySelectorAll('.more-view__products-wrapper .product').length;
 
-				productsWarapper.style.marginLeft = `-${this.productWidth()}px`;
-				console.log(productsWarapper.style.marginLeft, 'eee');
+				this.countSlide = this.countSlide + 1;
+				this.currentSlide = this.currentSlide + 1;
+
+				if (this.currentSlide <= qtdSlide) {
+					const left = this.productWidth() * this.countSlide;
+					productsWarapper.style.marginLeft = `-${left}px`;
+				} else {
+					this.countSlide = 0;
+					this.currentSlide = 5;
+					productsWarapper.style.marginLeft = '0px';
+				}
 			},
 			next() {
+				// const productsWarapper = document.querySelector('.more-view__products-wrapper');
+				// const qtdSlide = document.querySelectorAll('.more-view__products-wrapper .product').length;
 
+				// this.countSlide = this.countSlide + 1;
+
+				// if ((this.countSlide * 4) <= qtdSlide) {
+				// 	// alert();
+				// 	const right = this.productWidth() * this.countSlide;
+				// 	console.log(this.countSlide, qtdSlide, right);
+				// 	productsWarapper.style.marginRight = `${right}px`;
+				// } else {
+				// 	this.countSlide = 1;
+				// 	const right = this.productWidth() * this.countSlide;
+				// 	productsWarapper.style.marginRight = `${right}px`;
+				// }
 			},
 		},
 		mounted() {
+			this.wrapper();
 			this.whidthWrapper();
 		},
 
