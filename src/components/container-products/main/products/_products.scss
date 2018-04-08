@@ -1,0 +1,65 @@
+@import '../../../../assets/scss/variables.scss';
+
+.products-list {
+	display: grid;
+
+	grid-template-columns: repeat(4, 1fr);
+
+	grid-gap: 1rem;
+}
+
+.product {
+	padding: 1rem;
+
+	color: $gray-font-menu;
+}
+
+.product img {
+	width: 100%;
+}
+
+.product .product__delivery {
+	display: block;
+
+	width: 9rem;
+
+	padding: 0.5rem;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+
+	text-align: center;
+
+	color: $white;
+
+	background-color: $gray-font-menu;
+}
+
+.product .product__name a {
+	font-size: -1.25rem;
+
+	color: $gray-font-menu;
+}
+
+.product .product__description {
+	margin-bottom: 1rem;
+}
+
+.product .product__from--value,
+.product .product__to--value {
+	display: block;
+
+	margin: 0.5em 0;
+
+	font-weight: 500;
+	font-size: 1.25rem;
+}
+
+.product .product__from--value {
+	color: $green;
+}
+
+.product .product__to--value {
+}
+
+.product .product__by--button {
+}

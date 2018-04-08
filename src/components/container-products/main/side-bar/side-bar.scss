@@ -1,0 +1,50 @@
+@import '../../../../assets/scss/variables.scss';
+
+.side-bar {
+}
+
+.side-bar__menu {
+	font-weight: 300;
+
+	color: $green;
+}
+
+.side-bar__menu h3 {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 1rem;
+
+	font-weight: inherit;
+	font-size: 1rem;
+
+	background-color: $gray-menu;
+}
+
+.side-bar__menu li {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 3em;
+	margin-bottom: 1px;
+
+	font-size: 0.85rem;
+
+	color: $gray-menu;
+
+	background-color: $gray-submenu;
+
+	border-bottom: solid 1px rgb(220,220,220);
+}
+
+.side-bar__menu li::after {
+	padding: 10px;
+
+	background-repeat: no-repeat;
+
+	content: url('../../../../assets/images/seta.png');
+}
+
+.side-bar__menu  a {
+	text-decoration: none;
+
+	color: $gray-font-menu;
+}

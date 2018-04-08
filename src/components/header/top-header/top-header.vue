@@ -1,14 +1,14 @@
 <template>
   <div class="top-header">
 	 <div class="top-header__item top-header_logo">
-		 <a href="" ><img src="./assets/images/logo.png" alt=""></a>
+		 <a href="" ><img src="../../../assets/images/logo.png" alt=""></a>
 	 </div>
 	 <div class="top-header__item top-header__welcome">
 		<p>Olá visitante, Bem vindo</p>
 		<p>Faça seu login <a href="">aqui</a> ou <a href="">cadastre-se</a></p>
 		<fieldset >
 			<form action="">
-				<input type="text"><button>buscar</button>
+				<input type="text"><button class="btn btn-green">buscar</button>
 			</form>
 		</fieldset>
 	 </div>

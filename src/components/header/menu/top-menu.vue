@@ -1,5 +1,6 @@
 <template>
   <nav class="menu">
+	  <div class="menu__icon"> <span>&#8801;</span></div>
 	  <ul>
 		  <li><a href="">Homem</a></li>
 		  <li><a href="">Mulher</a></li>

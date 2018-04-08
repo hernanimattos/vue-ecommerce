@@ -10,6 +10,7 @@
 			 </form>
 		</fieldset>
 	  </header>
+
 	  <article>
 		  <h3> Últimos Produtos Visitantes</h3>
 		  <ul>
@@ -37,9 +38,7 @@
 			  <li><a href="">linkedin</a></li>
 		  </ul>
 		  <a href="">visite nosso blog</a>
-
 	  </article>
-
   </section>
 </template>
 <script>
@@ -55,6 +54,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'tail-bottom.scss';
+
 </style>
 
 

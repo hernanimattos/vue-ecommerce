@@ -1,0 +1,38 @@
+
+.more-view__products {
+	margin-right: 5rem;
+	margin-left: 5rem;
+
+	overflow: hidden;
+}
+
+.more-view__products-wrapper {
+	position: relative;
+	// width: 120%;
+
+	height: 35rem;
+
+	margin: 0;
+
+	overflow: hidden;
+
+	font-size: 0;
+}
+
+.controls {
+	display: block;
+
+	font-size: 1rem;
+
+	// padding: 2rem;
+}
+
+.more-view__products-wrapper .product {
+	display: inline-block;
+
+	width: 16rem;
+
+	padding: 2rem;
+
+	font-size: 1rem;
+}

@@ -3,7 +3,6 @@
 	  <top-header></top-header>
 	  <top-menu></top-menu>
 	  <slide></slide>
-
   </div>
 </template>
 <script>
@@ -26,6 +25,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'top.scss';
+
 </style>
 
 

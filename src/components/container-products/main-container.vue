@@ -1,20 +1,27 @@
 <template>
   <div class="main-container">
 	  <top-main></top-main>
-	  <side-bar></side-bar>
-	  <products></products>
-	  <bottom></bottom>
+	  <div class="wrapper-products">
+		  <div class="wrapprer-products__item">
+			  	<side-bar></side-bar>
+		  </div>
+		  <div class="wrapprer-products__item">
+			  <products></products>
+		  </div>
+	  </div>
+
+	  <moreViewProducts></moreViewProducts>
 	  <tail-bottom></tail-bottom>
 
   </div>
 </template>
 <script>
 
-import topMain from "./top/top-main";
-import sideBar from "./main/side-bar/side-bar";
-import products from "./main/products/products";
-import bottom from "./bottom/bottom";
-import tailBottom from "./tail-bottom/tail-bottom";
+import topMain from "./top/top-main.vue";
+import sideBar from "./main/side-bar/side-bar.vue";
+import products from "./main/products/products.vue";
+import moreViewProducts from "./bottom/more-view-products.vue";
+import tailBottom from "./tail-bottom/tail-bottom.vue";
 
 
 export default {
@@ -22,8 +29,9 @@ export default {
 		topMain,
 		sideBar,
 		products,
-		bottom,
 		tailBottom,
+		moreViewProducts,
+
 	},
   name: 'main-container',
   data () {
@@ -35,6 +43,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'main-container.scss';
+
 </style>
 
 

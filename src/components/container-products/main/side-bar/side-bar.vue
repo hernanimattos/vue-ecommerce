@@ -1,7 +1,7 @@
 <template>
   <div class="side-bar">
 	  <div class="side-bar__menu">
-		  <h3>Lorem ipsum</h3>
+		  <h3>Lorem impsum</h3>
 		  <ul>
 			  <li><a href="">Lorem ipsum</a></li>
 			  <li><a href="">Lorem ipsum</a></li>
@@ -43,7 +43,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "side-bar.scss";
+@import 'side-bar.scss';
+
 </style>
 
 

@@ -1,0 +1,42 @@
+button {
+	border: none;
+
+	appearance: none;
+}
+
+fieldset {
+	border: none;
+}
+
+.btn {
+	text-transform: uppercase;
+
+	color: $white;
+
+	appearance: none;
+}
+
+.btn.btn-by {
+	max-width: 8rem;
+}
+
+form {
+	display: table;
+
+	width: 100%;
+}
+
+.btn.btn-green,
+input {
+	padding: 0.5rem 1rem;
+}
+
+a.btn {
+	display: block;
+}
+
+.btn.btn-green {
+	background-color: $btn-green;
+
+	border: solid 1px #649966;
+}

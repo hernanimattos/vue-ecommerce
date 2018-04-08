@@ -1,3 +1,7 @@
+*:before,
+*:after {
+	box-sizing: inherit;
+}
 
 html * {
 	position: relative;
@@ -34,7 +38,7 @@ fieldset {
 
 	margin: 0 auto;
 
-	outline: red 2px solid;
+	outline: red 1px solid;
 }
 
 .text-green {
@@ -116,4 +120,18 @@ fieldset {
 	display: table;
 
 	content: '';
+}
+
+.top-section {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.5rem;
+
+	color: $green;
+
+	background-color: $background-color-distak-top-section;
+}
+
+.top-section h3 {
+	font-weight: 500;
 }

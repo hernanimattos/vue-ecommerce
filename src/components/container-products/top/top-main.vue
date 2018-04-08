@@ -1,8 +1,8 @@
 <template>
   <div class="top-main">
-	  <div class="top-main__imagem"><img src="" alt="">imagem um</div>
-	  <div class="top-main__imagem"><img src="" alt="">Imagem 2</div>
-	  <div class="top-main__imagem"><img src="" alt="">imagem 3</div>
+	  <div class="top-main__imagem"><a href=""><img src="../../../assets/images/banner-top-main-1.jpg" alt=""></a></div>
+	  <div class="top-main__imagem"><a href=""><img src="../../../assets/images/banner-top-main-2.jpg" alt=""></a></div>
+	  <div class="top-main__imagem"><a href=""><img src="../../../assets/images/banner-top-main-3.jpg" alt=""></a></div>
   </div>
 </template>
 <script>
@@ -17,6 +17,7 @@ export default {
 </script>
 <style lang="scss">
 @import 'top-main.scss';
+
 </style>
 
 
