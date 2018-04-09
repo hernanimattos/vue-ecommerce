@@ -109,7 +109,7 @@
 		data() {
 			return {
 				countSlide: 0,
-				currentSlide: 5,
+				currentSlide: 4,
 
 			};
 		},
@@ -140,47 +140,35 @@
 				const productsWarapper = document.querySelector('.more-view__products-wrapper');
 				const qtdSlide = document.querySelectorAll('.more-view__products-wrapper .product').length;
 
-				this.countSlide = this.countSlide + 1;
-				this.currentSlide = this.currentSlide + 1;
 
-				if (this.currentSlide <= qtdSlide) {
+				if (this.currentSlide < qtdSlide) {
+					this.countSlide = this.countSlide + 1;
+					this.currentSlide = this.currentSlide + 1;
+
 					const left = this.productWidth() * this.countSlide;
 					productsWarapper.style.marginLeft = `-${left}px`;
+					console.log(this.currentSlide, qtdSlide);
 				} else {
+					this.currentSlide = 4;
 					this.countSlide = 0;
-					this.currentSlide = 5;
 					productsWarapper.style.marginLeft = '0px';
+
 				}
 			},
 			before() {
 				const productsWarapper = document.querySelector('.more-view__products-wrapper');
 				const qtdSlide = document.querySelectorAll('.more-view__products-wrapper .product').length;
 
-				if (this.currentSlide >= 4) {
-					this.countSlide = this.countSlide + 1;
+				if (this.currentSlide > 4) {
+					this.countSlide = this.countSlide - 1;
+					this.currentSlide = this.currentSlide - 1;
 					let l = productsWarapper.style.marginLeft.split('-');
 					l = l[1].split('px');
-
-					console.log(l[0], 'dd');
-
 					const left = this.productWidth() - parseInt(l[0]);
-					console.log(this.countSlide, qtdSlide, left);
+
 					productsWarapper.style.marginLeft = `${left}px`;
+
 				}
-				// 	console.log('entrou');
-				//  const right = this.productWidth() * this.countSlide;
-				// 	console.log(this.countSlide, qtdSlide, right);
-				// 	productsWarapper.style.marginRight = `${right}px`;
-				// }
-				// 	// alert();
-				// 	const right = this.productWidth() * this.countSlide;
-				// 	console.log(this.countSlide, qtdSlide, right);
-				// 	productsWarapper.style.marginRight = `${right}px`;
-				// } else {
-				// 	this.countSlide = 1;
-				// 	const right = this.productWidth() * this.countSlide;
-				// 	productsWarapper.style.marginRight = `${right}px`;
-				// }
 			},
 		},
 		mounted() {
