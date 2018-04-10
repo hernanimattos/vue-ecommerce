@@ -21,7 +21,7 @@ export default {
 	name: 'top-menu',
 	data() {
 		return {
-			menuActive: false,
+			menuActive: true,
 		};
 	},
 

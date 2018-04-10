@@ -1,0 +1,38 @@
+$class-change: (
+	'class1': (
+      'color':#ffffff,
+      'blue': blue,
+      'red':red,
+      'btn--color':yellow,
+      'purple':purple,
+      'black': black,
+
+    ),
+
+);
+
+@each $class-palette, $rules in $class-change {
+	html.#{$class-palette} {
+		.menu ul {
+			background-color: map-get($rules, 'blue');
+		}
+
+		body {
+			background: map-get($rules, 'red');
+		}
+
+		.btn-green {
+			background: map-get($rules, 'black');
+		}
+
+		a {
+			color: map-get($rules, 'purple');
+		}
+
+		.product:hover {
+			color: map-get($rules, 'purple');
+
+			background: map-get($rules, 'black');
+		}
+	}
+}

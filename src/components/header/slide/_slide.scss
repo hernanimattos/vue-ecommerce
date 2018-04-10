@@ -1,3 +1,73 @@
-.teste{
-	appearance: none;
+
+.slide {
+	width: 100%;
+
+	overflow: hidden;
+}
+
+.slide .controls {
+	position: absolute;
+	top: 50%;
+
+	z-index: 11;
+
+	width: 100%;
+}
+
+.slide .controls .left {
+	position: absolute;
+	left: 10%;
+
+	width: 44px;
+	height: 100px;
+
+	overflow: hidden;
+
+	text-indent: -99999px;
+
+	cursor: pointer;
+
+	background-image: url('../../../assets/images/arrow-lef-slide.png');
+	background-repeat: no-repeat;
+}
+
+.slide .controls .right {
+	position: absolute;
+	right: 10%;
+
+	width: 44px;
+	height: 100px;
+
+	overflow: hidden;
+
+	text-indent: -99999px;
+
+	cursor: pointer;
+
+	background-image: url('../../../assets/images/arrow-right-slide.png');
+	background-repeat: no-repeat;
+}
+
+.slide__wrapper {
+	position: relative;
+
+	width: 200%;
+
+	overflow: hidden;
+
+	font-size: 0;
+
+	transition: 0.5s;
+}
+
+.slide__wrapper .slide__item {
+	float: left;
+
+	width: 50%;
+}
+
+.slide__wrapper img {
+	width: 100%;
+
+	object-fit: contain;
 }

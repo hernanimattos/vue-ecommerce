@@ -1,0 +1,117 @@
+@import '../../../assets/scss/variables.scss';
+
+.tail-bottom h3 {
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.tail-bottom header {
+	display: grid;
+
+	grid-template-rows: 3rem;
+	grid-template-columns: 39% 59%;
+	grid-column-gap: 2%;
+
+	padding-left: 2rem;
+
+	font-size: 0.9rem;
+
+	color: $white;
+
+	background-color: $green;
+}
+
+.tail-bottom header * {
+	align-self: center;
+}
+
+.form-newsletter form {
+	display: grid;
+
+	grid-template-columns: 40% 40% 4rem;
+}
+
+.tail-bottom__wrapper-item {
+	display: grid;
+
+	grid-template-columns: repeat(2, 48%);
+	grid-column-gap: 4%;
+}
+
+.tail-bottom__item--lists {
+	display: grid;
+
+	grid-template-columns: 60% 40%;
+
+	padding: 2rem;
+	margin-top: 20px;
+
+	outline: dotted 1px gray;
+}
+
+.tail-bottom__item--lists a {
+	font-size: 0.8rem;
+
+	text-decoration: none;
+
+	list-style-type: disc;
+	// list-style-type: circle;
+
+	color: $gray-font-menu;
+}
+
+.tail-bottom__redes-sociais {
+	padding: 2rem;
+	padding-top: 10%;
+	margin-top: 20px;
+
+	background-color: #cccccc;
+}
+
+.tail-bottom__redes-sociais ul {
+	padding-top: 1rem;
+
+	font-size: 0;
+}
+
+.tail-bottom__redes-sociais li {
+	display: inline-block;
+
+	width: 55px;
+	height: 55px;
+
+	overflow: hidden;
+
+	font-size: 1rem;
+
+	text-indent: -99999px;
+
+	cursor: pointer;
+
+	background-image: url('../../../assets/images/redes.png');
+	background-repeat: no-repeat;
+
+	&.twitter {
+		background-position-x: -55px;
+	}
+
+	&.faceboob {
+		background-position-x: -110px;
+	}
+
+	&.youtube {
+		background-position-x: -165px;
+	}
+
+	&.linkedin {
+		background-position-x: -220px;
+	}
+
+	&.visite {
+		width: 165px;
+
+		margin-left: 60px;
+
+		background-position-x: -308px;
+	}
+}

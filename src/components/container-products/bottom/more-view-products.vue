@@ -114,6 +114,23 @@
 			};
 		},
 		methods: {
+			wrapper() {
+				const wrapperSlide = document.querySelector('.more-view__products');
+
+				const widthWrapper = this.productWidth() * 4;
+				wrapperSlide.style.width = `${widthWrapper}px`;
+
+				return 	wrapperSlide.style.width;
+			},
+			whidthWrapper() {
+				const wrapperSlide = document.querySelector('.more-view__products-wrapper');
+				const wrapperSlideLength = document.querySelectorAll('.more-view__products-wrapper .product ').length;
+
+				const widthWrapper = this.productWidth() * wrapperSlideLength;
+				wrapperSlide.style.width = `${widthWrapper}px`;
+
+				return wrapperSlide.style.width;
+			},
 			productWidth() {
 				const element = document.querySelector('.more-view__products-wrapper .product');
 
@@ -131,7 +148,7 @@
 
 					const left = this.productWidth() * this.countSlide;
 					productsWarapper.style.marginLeft = `-${left}px`;
-					console.log(this.currentSlide, qtdSlide);
+
 				} else {
 					this.currentSlide = 4;
 					this.countSlide = 0;
@@ -141,14 +158,13 @@
 			},
 			before() {
 				const productsWarapper = document.querySelector('.more-view__products-wrapper');
-				const qtdSlide = document.querySelectorAll('.more-view__products-wrapper .product').length;
 
 				if (this.currentSlide > 4) {
 					this.countSlide = this.countSlide - 1;
 					this.currentSlide = this.currentSlide - 1;
 					let l = productsWarapper.style.marginLeft.split('-');
 					l = l[1].split('px');
-					const left = this.productWidth() - parseInt(l[0]);
+					const left = this.productWidth() - parseInt(l[0], 10);
 
 					productsWarapper.style.marginLeft = `${left}px`;
 
@@ -159,6 +175,7 @@
 			this.wrapper();
 			this.whidthWrapper();
 		},
+
 
 	};
 </script>

@@ -2,28 +2,28 @@
   <div id="app" class="container">
 	<top></top>
 	<main-container></main-container>
-	<cfooter></cfooter>
+
 
   </div>
 </template>
 
 <script>
-import top from "./components/header/top.vue";
-import mainContainer from "./components/container-products/main-container.vue";
-import cfooter from "./components/footer/cfooter";
+import top from './components/header/top.vue';
+import mainContainer from './components/container-products/main-container.vue';
+// import cfooter from "./components/footer/cfooter";
 export default {
 	components: {
 		top,
 		mainContainer,
-		cfooter,
+		// cfooter,
 	},
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+	name: 'app',
+	data() {
+		return {
+			msg: 'Welcome to Your Vue.js App',
+		};
+	},
+};
 </script>
 
 <style lang="scss">

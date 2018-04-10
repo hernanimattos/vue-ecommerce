@@ -13,6 +13,10 @@
 	font-size: 4em;
 
 	background-color: #3b673f;
+
+	@media (min-width:991px) {
+		display: none;
+	}
 }
 
 .menu__icon span {
@@ -59,6 +63,24 @@
 	font-size: 1rem;
 
 	border-bottom: #6f9672 1px solid;
+
+	@media (min-width:991px) {
+		display: inline-block;
+
+		padding: 0.5rem 0;
+
+		border: none;
+	}
+}
+
+.menu li:hover {
+	padding: 0.5rem 0;
+
+	background-color: #507550;
+}
+
+.menu li:hover a {
+	color: #dee8ac;
 }
 
 .menu a {
@@ -74,4 +96,8 @@
 	color: $white;
 
 	border-bottom: #608863 1px solid;
+
+	@media (min-width:991px) {
+		border: none;
+	}
 }

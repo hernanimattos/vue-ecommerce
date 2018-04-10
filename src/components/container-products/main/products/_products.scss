@@ -5,6 +5,8 @@
 
 	grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 
+	margin: 1rem 0;
+
 	grid-gap: 1rem;
 }
 
@@ -16,6 +18,32 @@
 
 .product img {
 	width: 100%;
+}
+
+.product:hover {
+	color: $white;
+
+	background-color: $background-color-distak-top-section;
+
+	transform: scale(1.01);
+
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+	0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	// transition: transform 1s;
+
+	transition: all 0.2s;
+}
+
+.product .btn-by {
+	display: none;
+}
+
+.product:hover .btn-by {
+	display: block;
+}
+
+.product:hover .product__delivery {
+	display: none;
 }
 
 .product .product__delivery {
@@ -56,10 +84,4 @@
 
 .product .product__from--value {
 	color: $green;
-}
-
-.product .product__to--value {
-}
-
-.product .product__by--button {
 }

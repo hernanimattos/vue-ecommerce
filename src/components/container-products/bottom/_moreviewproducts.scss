@@ -1,11 +1,13 @@
 
 .more-view__products {
+	margin: 0;
+	margin: 1rem 0;
 	margin-right: 5rem;
 	margin-left: 5rem;
 
 	overflow: hidden;
 
-	outline: red 1px solid;
+	// outline: red 1px solid;
 }
 
 .more-view__products .controls {
@@ -23,15 +25,15 @@
 .more-view__products .controls .right {
 	position: absolute;
 	right: 0;
+
+	// background-image: url('.');
 }
 
 .more-view__products-wrapper {
 	position: relative;
-
-	display: grid;
-
-	grid-template-columns: repeat(4, minmax(14rem, grid-auto-flow));
-	grid-auto-flow: column;
+	// display: grid;
+	// grid-template-columns: repeat(4, minmax(14rem, grid-auto-flow));
+	// grid-auto-flow: column;
 
 	height: 32rem;
 
@@ -45,7 +47,7 @@
 }
 
 .more-view__products-wrapper .product {
-	display: inline-block;
+	float: left;
 
 	width: 16rem;
 
