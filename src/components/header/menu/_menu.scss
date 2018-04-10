@@ -30,7 +30,7 @@
 }
 
 .menu ul {
-	display: block;
+	height: auto;
 
 	font-size: 0;
 
@@ -38,6 +38,19 @@
 	text-transform: uppercase;
 
 	background-color: $green;
+}
+
+.menu .status-menu {
+	max-height: 0;
+
+	overflow: hidden;
+
+	transition: max-height 1s;
+}
+
+.menu .status-menu.active {
+	height: auto;
+	max-height: 500px;
 }
 
 .menu li {

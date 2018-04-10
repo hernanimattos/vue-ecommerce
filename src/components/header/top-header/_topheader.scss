@@ -1,10 +1,23 @@
 @import '../../../assets/scss/variables.scss';
 
 .top-header {
+	display: grid;
+
+	grid-template-rows: 8rem;
+	grid-template-columns: 20% 50% 30% minmax(20%,1fr);
+
 	margin-top: 2.8rem;
 	margin-bottom: 1.8rem;
 
 	font-size: 0;
+
+	color: $gray-font-menu;
+
+	grid-gap: 1em;
+
+	@media (max-width: 61.94rem) {
+		grid-template-columns: 100% ;
+	}
 }
 
 .top-header_logo {
@@ -12,17 +25,23 @@
 
 	text-align: center;
 
-	@media (min-width: 61.94rem) {
-		width: 16.6666%;
-	}
+	object-fit: cover;
 }
 
 .top-header__item {
-	font-size: 1rem;
+	align-self: center;
 
-	@media (min-width:48rem) {
-		display: inline-block;
-	}
+	font-size: 1rem;
+}
+
+.top-header form {
+	display: grid;
+
+	grid-template-columns: 80% auto;
+}
+
+.top-header fieldset {
+	padding-top: 2rem;
 }
 
 .top-header__bagage ul {
@@ -30,11 +49,13 @@
 }
 
 .top-header__bagage ul li::before {
+	color: $gray-font-menu;
+
 	content: '\203a';
 }
 
-.top-header__bagage ul li {
-	display: inline-block;
+.top-header__bagage ul li a {
+	color: $gray-font-menu;
 }
 
 .top-header__bagage--itens::before {
@@ -43,11 +64,27 @@
 	width: 2em;
 	height: 3em;
 
-	padding-right: 0.5em;
+	padding-right: 3em;
 
 	background-image: url('../../../assets/images/bagage.png');
+	background-repeat: no-repeat;
 
 	content: '';
+}
+
+p.top-header__bagage--itens {
+	@media (min-width:41rem) {
+		display: inline-block;
+	}
+}
+
+.top-header__bagage--options {
+	display: inline-block;
+
+	padding-top: 1.7rem;
+	padding-right: 0.5rem;
+
+	font-size: 0.85rem;
 }
 
 .top-header__bagage--itens * {
@@ -59,28 +96,4 @@
 .top-header__welcome {
 	margin-right: 1rem;
 	margin-left: 1rem;
-
-	@media (min-width:36.94rem) {
-		width: 70%;
-
-		padding-right: $guther;
-		padding-left: $guther;
-		margin: 0 auto;
-	}
-
-	@media (min-width:48rem) {
-		width: 50%;
-	}
-}
-
-.top-header__bagage {
-	@media (min-width: 61.94rem) {
-		width: 33.3333%;
-	}
-}
-
-.top-header__bagage--options li {
-	display: inline-block;
-
-	width: 49%;
 }
