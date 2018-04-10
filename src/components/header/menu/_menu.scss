@@ -34,6 +34,8 @@
 }
 
 .menu ul {
+	display: block;
+
 	height: auto;
 
 	font-size: 0;
@@ -50,11 +52,25 @@
 	overflow: hidden;
 
 	transition: max-height 1s;
+
+	@media (min-width:991px) {
+		display: block;
+
+		height: auto;
+		max-height: none;
+	}
 }
 
 .menu .status-menu.active {
 	height: auto;
 	max-height: 500px;
+
+	@media (min-width:991px) {
+		display: block;
+
+		height: auto;
+		max-height: none;
+	}
 }
 
 .menu li {
