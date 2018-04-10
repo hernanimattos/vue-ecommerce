@@ -27,7 +27,11 @@
 
 .more-view__products-wrapper {
 	position: relative;
-	// width: 120%;
+
+	display: grid;
+
+	grid-template-columns: repeat(4, minmax(14rem, grid-auto-flow));
+	grid-auto-flow: column;
 
 	height: 32rem;
 

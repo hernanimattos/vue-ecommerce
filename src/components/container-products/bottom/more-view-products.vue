@@ -120,21 +120,21 @@
 				return element.offsetWidth;
 			},
 			wrapper() {
-				const wrapperSlide = document.querySelector('.more-view__products');
+				// const wrapperSlide = document.querySelector('.more-view__products');
 
-				const widthWrapper = this.productWidth() * 4;
-				wrapperSlide.style.width = `${widthWrapper}px`;
+				// const widthWrapper = this.productWidth() * 4;
+				// wrapperSlide.style.width = `${widthWrapper}px`;
 
-				return 	wrapperSlide.style.width;
+				// return 	wrapperSlide.style.width;
 			},
 			whidthWrapper() {
-				const wrapperSlide = document.querySelector('.more-view__products-wrapper');
-				const wrapperSlideLength = document.querySelectorAll('.more-view__products-wrapper .product ').length;
+				// const wrapperSlide = document.querySelector('.more-view__products-wrapper');
+				// const wrapperSlideLength = document.querySelectorAll('.more-view__products-wrapper .product ').length;
 
-				const widthWrapper = this.productWidth() * wrapperSlideLength;
-				wrapperSlide.style.width = `${widthWrapper}px`;
+				// const widthWrapper = this.productWidth() * wrapperSlideLength;
+				// wrapperSlide.style.width = `${widthWrapper}px`;
 
-				return wrapperSlide.style.width;
+				// return wrapperSlide.style.width;
 			},
 			next() {
 				const productsWarapper = document.querySelector('.more-view__products-wrapper');
@@ -180,7 +180,7 @@
 </script>
 
 <style lang="scss">
-	@import 'moreviewproducts.scss';
+@import 'moreviewproducts.scss';
 
 </style>
 
